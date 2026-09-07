@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokéBuscador - Consumo de PokeAPI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>PokéBuscador</h1>
+    <p class="subtitle">Aplicación web de consulta a la PokeAPI</p>
+  </header>
+
+  <main class="container">
+
+    <section class="controls">
+      <div class="control-group">
+        <label for="search">Buscar por nombre</label>
+        <input type="text" id="search" placeholder="Ej: pikachu, charizard...">
+      </div>
+
+      <div class="control-group">
+        <label for="type-filter">Filtrar por tipo</label>
+        <select id="type-filter">
+          <option value="">Todos los tipos</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="sort-order">Ordenar</label>
+        <select id="sort-order">
+          <option value="id-asc">Número (menor a mayor)</option>
+          <option value="id-desc">Número (mayor a menor)</option>
+          <option value="name-asc">Nombre (A-Z)</option>
+          <option value="name-desc">Nombre (Z-A)</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="status-msg" class="status-msg"></p>
+
+    <section id="card-grid" class="card-grid"></section>
+
+    <nav class="pagination">
+      <button id="prev-btn">&laquo; Anterior</button>
+      <span id="page-info">Página 1</span>
+      <button id="next-btn">Siguiente &raquo;</button>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Datos obtenidos de <a href="https://pokeapi.co" target="_blank" rel="noopener">PokeAPI</a> - Proyecto académico</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
